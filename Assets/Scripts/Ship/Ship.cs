@@ -58,13 +58,18 @@ public class Ship : MonoBehaviour
 
        
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        FuelBar.SetMaxFuel(ShipStats.InitialFuel);
-        PowerBank.SetMaxPower(ShipStats.InitialPower);
-        IntegrityBar.SetMaxIntegrity(ShipStats.InitialIntegrity);
+        FuelBar fBar = GetComponent<FuelBar>();
+        PowerBank pBank = GetComponent<PowerBank>();
+        IntegrityBar iBar = GetComponent<IntegrityBar>();
 
-        FuelBar.SetFuel(ShipStats.InitialFuel);
+
+        fBar.SetMaxFuel(ShipStats.InitialFuel);
+        pBank.SetMaxPower(ShipStats.InitialPower);
+        iBar.SetMaxIntegrity(ShipStats.InitialIntegrity);
+
+        //FuelBar.SetFuel(ShipStats.InitialFuel);
         //DescentSpeedDisplay.SetInitialDescentSpeed(ShipStats.InitialDescentSpeed)
 
     }
