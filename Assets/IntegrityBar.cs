@@ -4,24 +4,24 @@ using UnityEngine.UI;
 using UnityEngine;
 
 
-public class FuelBar : MonoBehaviour
+public class IntegrityBar : MonoBehaviour
 {
 
     public Slider slider;
     public Gradient gradient;
     public Image fill; //who is phill?
 
-    public void SetMaxFuel(float fuel)
+    public void SetMaxIntegrity(float integ)
     {
         fill.color = gradient.Evaluate(1f);
-        slider.maxValue = fuel;
-        slider.value = fuel;
+        slider.maxValue = integ;
+        slider.value = integ;
     }
 
-    public void SetFuel(float fuel)
+    public void SetIntegrity(float integ)
     {
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        slider.value = fuel;
+        slider.value = integ;
     }
 
 }

@@ -20,15 +20,15 @@ public class Ship : MonoBehaviour
     }
 
     [SerializeField]
-    private FuelBar powerBar;
-    public FuelBar PowerBar
+    private PowerBank powerBank;
+    public PowerBank PowerBank
     {
-        get { return powerBar; }
+        get { return powerBank; }
     }
 
     [SerializeField]
-    private FuelBar integrityBar;
-    public FuelBar IntegrityBar
+    private IntegrityBar integrityBar;
+    public IntegrityBar IntegrityBar
     {
         get { return integrityBar; }
     }
@@ -56,13 +56,15 @@ public class Ship : MonoBehaviour
 
 
 
-
+       
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         FuelBar.SetMaxFuel(ShipStats.InitialFuel);
-        PowerBar.SetMaxFuel(ShipStats.InitialPower);
-        IntegrityBar.SetMaxFuel(ShipStats.InitialIntegrity);
+        PowerBank.SetMaxPower(ShipStats.InitialPower);
+        IntegrityBar.SetMaxIntegrity(ShipStats.InitialIntegrity);
+
+        FuelBar.SetFuel(ShipStats.InitialFuel);
         //DescentSpeedDisplay.SetInitialDescentSpeed(ShipStats.InitialDescentSpeed)
 
     }

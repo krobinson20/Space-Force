@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class BarMath : MonoBehaviour
 {
-    [SerializeField]
+   
 
 }
