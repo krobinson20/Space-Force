@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 167759191}
   - component: {fileID: 167759193}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Integrity Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37fc839f1e063447a2596d1a01af119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextField: {fileID: 0}
+  TextField: {fileID: 167759191}
 --- !u!1 &349908110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49c2412498ed1a48b143594f5492475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  text: {fileID: 167759191}
 --- !u!1 &2009118176
 GameObject:
   m_ObjectHideFlags: 0
