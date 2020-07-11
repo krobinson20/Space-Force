@@ -1,30 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UP : MonoBehaviour
+public class Dischargeslider : MonoBehaviour
 {
     [SerializeField]
     public Text TextField;
 
     private Ship ship;
-    private Integritytext integritytext;
     private Powertext powertext;
 
-    void Awake()
+    void Start()
     {
         ship = GetComponent<Ship>();
-        integritytext = GameObject.Find("Ship").GetComponent<Integritytext>();
         powertext = GameObject.Find("Ship").GetComponent<Powertext>();
     }
 
-    public void SetText()
+    public void SetText(float sliderval)
     {
-        integritytext.CurrentIntegrity -= 1;
-        powertext.CurrentPower -= 1;
-        integritytext.SetIntegrity(integritytext.CurrentIntegrity);
+        powertext.CurrentPower = Mathf.Round(sliderval * 100);
         powertext.SetPower(powertext.CurrentPower);
     }
-
 }

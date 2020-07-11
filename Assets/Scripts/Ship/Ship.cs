@@ -13,17 +13,17 @@ public class Ship : MonoBehaviour
     }
     
     [SerializeField]
-    private FuelBar fuelBar;
-    public FuelBar FuelBar
+    private Fueltext fuelText;
+    public Fueltext FuelText
     {
-        get { return fuelBar; }
+        get { return fuelText; }
     }
 
     [SerializeField]
-    private PowerBank powerBank;
-    public PowerBank PowerBank
+    private Powertext powerText;
+    public Powertext PowerText
     {
-        get { return powerBank; }
+        get { return powerText; }
     }
 
     [SerializeField]
@@ -66,8 +66,8 @@ public class Ship : MonoBehaviour
         //FuelBar.SetFuel(ShipStats.InitialFuel);
         //DescentSpeedDisplay.SetInitialDescentSpeed(ShipStats.InitialDescentSpeed)
         IntegrityText.SetMaxIntegrity(ShipStats.InitialIntegrity);
-
-
+        PowerText.SetMaxPower(ShipStats.InitialPower);
+        FuelText.SetMaxFuel(ShipStats.InitialFuel);
 
     }
 
