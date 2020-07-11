@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipStats
+public class ShipStats : MonoBehaviour
 {
     [SerializeField]
     private float initialDescentSpeed;
