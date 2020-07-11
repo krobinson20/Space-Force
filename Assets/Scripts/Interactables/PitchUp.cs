@@ -1,28 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using static Ship;
+//using static Ship;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class PitchUp : MonoBehaviour
 {
     private Ship ship;
+    private FuelBar fBar;
+    private PowerBank pBank;
+    //private Slider slider;
     void Awake()
     {
         ship = GetComponent<Ship>();
+        pBank = GetComponent<PowerBank>();
+        fBar = GetComponent<FuelBar>();
     }
 
     public float PitchUp1()
     {
-        return ship.FuelBar.slider.value -= 10f;
+        return fBar.slider.value -= 10f;
     }
     public float PitchUp2()
     {
-        return ship.PowerBank.slider.value -= 10f;
+        return pBank.slider.value -= 10f;
     }
 
-    public void OnClick()
+    public void ApplyValues()
     {
-        ship.FuelBar.SetFuel(PitchUp1());
-        ship.PowerBank.SetPower(PitchUp2()); 
+        fBar.SetFuel(PitchUp1());
+        pBank.SetPower(PitchUp2());
     }
 }
