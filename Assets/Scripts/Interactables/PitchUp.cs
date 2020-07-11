@@ -31,4 +31,5 @@ public class PitchUp : MonoBehaviour
     {
         fBar.SetFuel(PitchUp1());
         pBank.SetPower(PitchUp2());
+    }
 }
