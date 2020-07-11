@@ -65,8 +65,8 @@ public class Ship : MonoBehaviour
         //IntegrityBar.SetMaxIntegrity(ShipStats.InitialIntegrity);
         //FuelBar.SetFuel(ShipStats.InitialFuel);
         //DescentSpeedDisplay.SetInitialDescentSpeed(ShipStats.InitialDescentSpeed)
+        IntegrityText.SetMaxIntegrity(ShipStats.InitialIntegrity);
 
-      
 
 
     }
@@ -74,6 +74,6 @@ public class Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          IntegrityText.SetMaxIntegrity(ShipStats.InitialIntegrity);
+          
     }
 }

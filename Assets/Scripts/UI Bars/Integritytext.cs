@@ -6,28 +6,33 @@ using UnityEngine.UI;
 public class Integritytext : MonoBehaviour
 {
     public Text text;
-    private float CurrentIntegrity;
-    public float currentintegrity
+    private float currentIntegrity;
+    public float CurrentIntegrity
     {
         get
         {
-            return CurrentIntegrity;
+            return currentIntegrity;
         }
         set
         {
-            CurrentIntegrity = value;
+            currentIntegrity = value;
         }
     }
 
+    private void Awake()
+    {
+        text = GameObject.Find("Text").GetComponent<Text>();
+    }
     public void SetMaxIntegrity(float integrity)
     {
-        text.text = (integrity).ToString("0"); 
+        text.text = (integrity).ToString("0") + "%";
+        currentIntegrity = integrity;
     }
 
     public void SetIntegrity(float integrity)
     {
-        currentintegrity = integrity;
-        text.text = (currentintegrity).ToString("0");
+        currentIntegrity = integrity;
+        text.text = (currentIntegrity).ToString("0") + "%";
         
     }
 }

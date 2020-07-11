@@ -13,18 +13,13 @@ public class UP : MonoBehaviour
     void Awake()
     {
         ship = GetComponent<Ship>();
-        integritytext = GetComponent<Integritytext>();
+        integritytext = GameObject.Find("Ship").GetComponent<Integritytext>();
     }
 
     public void SetText()
     {
-        
-      float temp =  integritytext.currentintegrity--;
-
-      integritytext.SetIntegrity(temp);
-
-       
-        
+        integritytext.CurrentIntegrity -= 1;
+        integritytext.SetIntegrity(integritytext.CurrentIntegrity);        
     }
 
 
