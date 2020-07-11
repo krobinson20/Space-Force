@@ -4,24 +4,24 @@ using UnityEngine.UI;
 using UnityEngine;
 
 
-public class FuelBar : MonoBehaviour
+public class PowerBank : MonoBehaviour
 {
 
     public Slider slider;
-    //public Gradient gradient;
+   // public Gradient gradient;
     //public Image fill; //who is phill?
 
-    public void SetMaxFuel(float fuel)
+    public void SetMaxPower(float power)
     {
        // fill.color = gradient.Evaluate(1f);
-        slider.maxValue = fuel;
-        slider.value = fuel;
+        slider.maxValue = power;
+        slider.value = power;
     }
 
-    public void SetFuel(float fuel)
+    public void SetPower(float power)
     {
        // fill.color = gradient.Evaluate(slider.normalizedValue);
-        slider.value = fuel;
+        slider.value = power;
     }
 
 }
