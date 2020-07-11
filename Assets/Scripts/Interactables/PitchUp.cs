@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 //using static Ship;
 using UnityEngine;
 //using UnityEngine.UI;
@@ -30,5 +31,4 @@ public class PitchUp : MonoBehaviour
     {
         fBar.SetFuel(PitchUp1());
         pBank.SetPower(PitchUp2());
-    }
 }
