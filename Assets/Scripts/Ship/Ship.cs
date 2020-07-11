@@ -58,7 +58,7 @@ public class Ship : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         FuelBar.SetMaxFuel(ShipStats.InitialFuel);
         PowerBar.SetMaxFuel(ShipStats.InitialPower);
