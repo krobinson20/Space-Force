@@ -21,6 +21,8 @@ public class UP : MonoBehaviour
 
     public void SetText()
     {
+        //call the funciton that will handle the math and pass it back to here
+        //that will edit the value for the numbers to change
         integritytext.CurrentIntegrity -= 1;
         powertext.CurrentPower -= 1;
         integritytext.SetIntegrity(integritytext.CurrentIntegrity);
