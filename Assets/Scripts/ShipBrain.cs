@@ -12,14 +12,14 @@ public class ShipBrain : MonoBehaviour
         get; protected set;
     }
     [SerializeField]
-    private PowerBar powerBar;
-    public PowerBar PowerBar
+    private FuelBar powerBar;
+    public FuelBar PowerBar
     {
         get; protected set;
     }
     [SerializeField]
-    private IntegrityBar integrityBar;
-    public IntegrityBar IntegrityBar
+    private FuelBar integrityBar;
+    public FuelBar IntegrityBar
     {
         get; protected set;
     }
