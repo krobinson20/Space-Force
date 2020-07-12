@@ -13,7 +13,7 @@ public class Dischargeslider : MonoBehaviour
     private float holdon;
     void Start()
     {
-        ship = GetComponent<Ship>();
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
         powertext = GameObject.Find("Ship").GetComponent<Powertext>();
     }
 
