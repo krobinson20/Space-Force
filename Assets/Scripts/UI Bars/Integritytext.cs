@@ -35,4 +35,5 @@ public class Integritytext : MonoBehaviour
         text.text = (currentIntegrity).ToString("0") + "%";
         
     }
-}
+
+    }
