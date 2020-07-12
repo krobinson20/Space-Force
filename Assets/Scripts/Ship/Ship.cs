@@ -39,13 +39,6 @@ public class Ship : MonoBehaviour
     {
         get { return shipStats; }
     }
-
-    [SerializeField]
-    private BarMath barMath;
-    public BarMath BarMath
-    {
-        get { return barMath; }
-    }
     /*[Header("Ship Components")]
     [SerializeField]
     private SpriteRenderer spriteRenderer;
