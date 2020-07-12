@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public abstract class TextController : MonoBehaviour
 {
-    private EndGameState endState;
-    public EndGameState EndState
-    {
-        get { return endState; }
-    }
     public Text text;
 
     virtual public void Awake() { }

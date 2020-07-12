@@ -31,4 +31,36 @@ public class ShipStats : MonoBehaviour
     {
         get { return initialIntegrity; }
     }
+
+    [SerializeField]
+    private float integrity;
+    public float Integrity
+    {
+        get { return integrity; }
+        set { integrity = value; }
+    }
+
+    [SerializeField]
+    private float descentSpeed;
+    public float DescentSpeed
+    {
+        get { return descentSpeed; }
+        set { descentSpeed = value; }
+    }
+
+    [SerializeField]
+    private float fuel;
+    public float Fuel
+    {
+        get { return fuel; }
+        set { fuel = value; }
+    }
+
+    [SerializeField]
+    private float power;
+    public float Power
+    {
+        get { return power; }
+        set { power = value; }
+    }
 }
