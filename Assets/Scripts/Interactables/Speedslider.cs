@@ -17,9 +17,32 @@ public class Speedslider : MonoBehaviour
         fueltext = GameObject.Find("Ship").GetComponent<Fueltext>();
     }
 
+    private float holdon = .5f;
+
     public void SetText(float sliderval)
     {
-        fueltext.CurrentFuel = Mathf.Round(sliderval * 100) ;
-        fueltext.SetFuel(fueltext.CurrentFuel);
+        holdon = sliderval;      
+    }
+
+    private void FixedUpdate()
+    {
+        if (holdon > .5)
+        {
+            float temp = holdon;
+            float percent = holdon ;
+            fueltext.CurrentFuel -= percent * Time.deltaTime;
+            fueltext.SetFuel(fueltext.CurrentFuel);
+        }
+        else if (holdon < .5)
+        {
+            float temp = (holdon - .5f)* -2;
+            float percent = holdon;
+            fueltext.CurrentFuel -= percent * Time.deltaTime;
+            fueltext.SetFuel(fueltext.CurrentFuel);
+            
+
+        }
+        ship.ShipStats.Fuel = fueltext.CurrentFuel;
+        
     }
 }

@@ -22,6 +22,7 @@ public class DOWN : MonoBehaviour
     {
         powertext.CurrentPower -= 1;
         powertext.SetPower(powertext.CurrentPower);
+        ship.ShipStats.Power = powertext.CurrentPower;
     }
 
 }
