@@ -27,6 +27,7 @@ public class Powertext : MonoBehaviour
     {
         text.text = (power).ToString("0") + "%";
         currentPower = power;
+
     }
 
     public void SetPower(float power)

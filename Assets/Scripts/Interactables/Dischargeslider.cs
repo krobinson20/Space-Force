@@ -13,7 +13,7 @@ public class Dischargeslider : MonoBehaviour
     private float holdon;
     void Start()
     {
-        ship = GetComponent<Ship>();
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
         powertext = GameObject.Find("Ship").GetComponent<Powertext>();
     }
 
@@ -27,6 +27,7 @@ public class Dischargeslider : MonoBehaviour
         float temp = holdon * 100;
         powertext.CurrentPower -= (temp / 100) * Time.deltaTime;
         powertext.SetPower(powertext.CurrentPower);
-        ship.ShipStats.Power = powertext.CurrentPower;
+        //ship.ShipStats.Power = powertext.CurrentPower;
+        Debug.Log(ship.ShipStats.Power);
     }
 }

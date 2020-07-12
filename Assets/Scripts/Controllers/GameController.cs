@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class GameController
 {
     [Header("Game Controllers")]
     [SerializeField] private PlayController playCont;
@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        playCont = GetComponent<PlayController>();
-        uiCont = GetComponent<UIController>();
+        //playCont = GetComponent<PlayController>();
+        //uiCont = GetComponent<UIController>();
         currentState = States.MainMenu;
     }
 

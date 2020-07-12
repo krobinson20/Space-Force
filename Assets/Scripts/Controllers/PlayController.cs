@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayController : MonoBehaviour
+public class PlayController
 {
     [SerializeField] private bool integrityThresholdFlag;
     [SerializeField] private float integrityThreshold = 40.0f;
@@ -15,6 +15,7 @@ public class PlayController : MonoBehaviour
     [SerializeField] private GameOverController gameOverCont;
     [SerializeField] private GameController gameCont;
     [SerializeField] private RandEventController randEventCont;
+    [SerializeField] private Ship ship;
     
     public void SetIntegrityFlag(float integVal)
     {
@@ -84,9 +85,10 @@ public class PlayController : MonoBehaviour
         zeroFuel = false;
         zeroPower = false;
         RandEventTimeThreshold = false;
-        gameCont = GetComponent<GameController>();
-        gameOverCont = GetComponent<GameOverController>();
-        randEventCont = GetComponent<RandEventController>();
+        //gameCont = GetComponent<GameController>();
+        //gameOverCont = GetComponent<GameOverController>();
+        //randEventCont = GetComponent<RandEventController>();
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
     }
 
     public void Exit()

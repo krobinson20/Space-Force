@@ -13,7 +13,7 @@ public class Speedslider : MonoBehaviour
 
     void Start()
     {
-        ship = GetComponent<Ship>();
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
         fueltext = GameObject.Find("Ship").GetComponent<Fueltext>();
     }
 
@@ -42,7 +42,7 @@ public class Speedslider : MonoBehaviour
             
 
         }
-        ship.ShipStats.Fuel = fueltext.CurrentFuel;
+        //ship.ShipStats.Fuel = fueltext.CurrentFuel;
         
     }
 }
