@@ -27,6 +27,8 @@ public class UP : MonoBehaviour
         powertext.CurrentPower -= 1;
         integritytext.SetIntegrity(integritytext.CurrentIntegrity);
         powertext.SetPower(powertext.CurrentPower);
+        ship.ShipStats.Power = powertext.CurrentPower;
+        ship.ShipStats.Integrity = integritytext.CurrentIntegrity;
     }
 
 }

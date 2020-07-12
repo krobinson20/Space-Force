@@ -10,7 +10,7 @@ public class Dischargeslider : MonoBehaviour
 
     private Ship ship;
     private Powertext powertext;
-
+    private float holdon;
     void Start()
     {
         ship = GetComponent<Ship>();
@@ -19,7 +19,14 @@ public class Dischargeslider : MonoBehaviour
 
     public void SetText(float sliderval)
     {
-        powertext.CurrentPower = Mathf.Round(sliderval * 100);
+        holdon = sliderval;
+    }
+
+    private void FixedUpdate()
+    {
+        float temp = holdon * 100;
+        powertext.CurrentPower -= (temp / 100) * Time.deltaTime;
         powertext.SetPower(powertext.CurrentPower);
+        ship.ShipStats.Power = powertext.CurrentPower;
     }
 }
